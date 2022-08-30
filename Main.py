@@ -45,7 +45,7 @@ class DoublyCircularLinkedList:
             return True
         
         elif index>=self.count:
-            return False
+            return True
         
         elif index==0:
             add_at_head(data)
@@ -103,7 +103,7 @@ class DoublyCircularLinkedList:
                 self.count-=1
                     
         else:
-            return False
+            return True
         
         
 
