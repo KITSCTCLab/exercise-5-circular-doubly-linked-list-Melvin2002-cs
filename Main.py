@@ -22,16 +22,21 @@ class DoublyCircularLinkedList:
 
     def add_at_head(self, data) -> bool:
         # Write code here
-        temp=Node(data)
-        temp.next=self.head
-        temp.previous=self.head.previous
-        self.head.previous=temp
-        temp.previous.next=temp
-        self.head=temp
-        self.head.next=self.head
-        self.head.previous=self.head
-        self.count+=1
-        return 1
+        if self.head==None:
+            temp=Node(data)
+            self.head=temp
+            self.head.next=self.head
+            self.head.previous=self.head
+            return 1
+        else:       
+            temp=Node(data)
+            temp.next=self.head
+            temp.previous=self.head.previous
+            self.head.previous=temp
+            temp.previous.next=temp
+            self.head=temp
+            self.count+=1
+            return 1
 
     def add_at_index(self, index, data) -> bool:
         # Write code here
