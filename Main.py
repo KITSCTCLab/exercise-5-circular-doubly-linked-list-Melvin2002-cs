@@ -128,10 +128,14 @@ class DoublyCircularLinkedList:
 
 # Do not change the following code
 operations = []
-for specific_operation in input().split(','):
-    operations.append(specific_operation.strip())
-input_data = input()
-data = []
+a=input()
+b = input()
+print(a)
+print(b)
+#for specific_operation in input().split(','):
+ #   operations.append(specific_operation.strip())
+
+'''data = []
 iteration_count = 0
 for item in input_data.split(', '):
     inner_list = []
@@ -166,13 +170,13 @@ for i in range(len(operations)):
         result.append(obj.get_previous_next(data[i]))
         #print(obj.get_previous_next(data[i]))
     elif operations[i] == 'delete_at_index':
-        result.append(obj.delete_at_index(data[i]))
+        result.append(obj.delete_at_index(data[i]))'''
         #print(obj.delete_at_index(data[i]))
     #print("\n\n")
     #print(obj.count,"MMMMMM")
     #obj.display()
     #print(i,"++++")
     #print("\n\n")
-print(result)
+#print(result)
 
 #True, True, True, 2, True, 3, [10, 10]]
