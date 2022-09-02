@@ -71,6 +71,8 @@ class DoublyCircularLinkedList:
 
         if index < 0 and index >= self.count:
             return -1
+        elif  self.head== None:
+            return -1
         else:
             temp = self.head
             for i in range(index):
