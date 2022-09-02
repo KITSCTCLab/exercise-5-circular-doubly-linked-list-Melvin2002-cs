@@ -128,14 +128,10 @@ class DoublyCircularLinkedList:
 
 # Do not change the following code
 operations = []
-a=input()
-b = input()
-print(a)
-print(b)
-#for specific_operation in input().split(','):
- #   operations.append(specific_operation.strip())
-
-'''data = []
+for specific_operation in input().split(','):
+    operations.append(specific_operation.strip())
+input_data = input()
+data = []
 iteration_count = 0
 for item in input_data.split(', '):
     inner_list = []
@@ -153,15 +149,22 @@ result = []
 
 for i in range(len(operations)):
 
-
     if operations[i] == "add_at_head":
-        result.append(obj.add_at_head(data[i]))
+        a=obj.add_at_head(data[i])
+        if a!=None:
+            result.append(a)
+        else:
+            result.append(False)
         #print(obj.add_at_head(data[i]),"***")
     elif operations[i] == "add_at_tail":
         result.append(obj.add_at_tail(data[i]))
         #print(obj.add_at_tail(data[i]))
     elif operations[i] == "add_at_index":
-        result.append(obj.add_at_index(int(data[i][0]), data[i][1]))
+        a=obj.add_at_index(int(data[i][0]), data[i][1])
+        if a!=None:
+            result.append(a)
+        else:
+            result.append(False)
         #print(obj.add_at_index(int(data[i][0]), data[i][1]))
     elif operations[i] == "get":
         result.append(obj.get(data[i]))
@@ -170,13 +173,14 @@ for i in range(len(operations)):
         result.append(obj.get_previous_next(data[i]))
         #print(obj.get_previous_next(data[i]))
     elif operations[i] == 'delete_at_index':
-        result.append(obj.delete_at_index(data[i]))'''
+        result.append(obj.delete_at_index(data[i]))
         #print(obj.delete_at_index(data[i]))
     #print("\n\n")
     #print(obj.count,"MMMMMM")
     #obj.display()
     #print(i,"++++")
     #print("\n\n")
-#print(result)
+
+print(result)
 
 #True, True, True, 2, True, 3, [10, 10]]
